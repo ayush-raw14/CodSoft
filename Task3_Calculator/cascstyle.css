@@ -16,7 +16,7 @@
     background-color: #ecf0f3;
     padding: 15px;
     border-radius: 30px;
-    box-shadow: inset 5px 5px 12px #ffffff,
+    box-shadow: inset 5px 5px 12px #fff,
                       5px 5px 12px rgba(0,0,0,.16);
     display: grid;
     grid-template-columns: repeat(4,68px);
