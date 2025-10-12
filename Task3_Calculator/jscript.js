@@ -17,5 +17,5 @@ function clearScr() {
 }
 
 function del() {
-    outputScreen.value = outputScreen.value.slice(0, -1);
+    outputScreen.value = outputScreen.value.slice(0,-1);
 }
