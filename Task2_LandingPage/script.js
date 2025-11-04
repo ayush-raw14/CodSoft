@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger);
 window.addEventListener('load', function() {
 
     gsap.from(".hero-title", {
-        opacity: 0,
+        opacity: 0.1,
         y: 100,
         duration: 1.5,
         ease: "power3.out",
