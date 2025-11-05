@@ -1,171 +1,210 @@
 :root {
-    --text-color: #1a1c20;
-    --link-color: #4a76ee;
-    --background-color: #eeeff1;
+    --text-color: #E8EAF6;
+    --link-color: #6366F1;
+    --background-color: #0F172A;
+    --card-background: #1E293B;
+    --border-color: #334155;
+    --accent-color: #8B5CF6;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
+    color: var(--text-color);
 }
 
-a{
+a {
     color: var(--link-color);
     text-decoration: none;
 }
 
 /*NavBar*/
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
-    height: 80px;    
+    height: 80px;
+    background-color: var(--card-background);
+    border-bottom: 1px solid var(--border-color);
 }
 
-nav .left a{
+nav .left a {
     color: var(--text-color);
     font-size: 22px;
     font-weight: 600;
 }
 
-nav .right a{
+nav .right a {
     color: var(--text-color);
     margin: 0 10px;
+    transition: color 0.2s;
 }
 
-nav .right a:last-child{
+nav .right a:hover {
+    color: var(--link-color);
+}
+
+nav .right a:last-child {
     color: var(--background-color);
-    background-color: var(--text-color);
-    padding: 5px 15px;
+    background: linear-gradient(135deg, var(--link-color), var(--accent-color));
+    padding: 8px 20px;
     border-radius: 10px;
 }
 
-nav .right a span{
+nav .right a:last-child:hover {
+    opacity: 0.9;
+    color: #fff;
+}
+
+nav .right a span {
     margin-left: 5px;
 }
 
 /*Hero*/
-.hero-section{
+.hero-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
-    margin: 50px 0;
-    margin-bottom: 100px;
+    margin: 80px 0;
+    margin-bottom: 120px;
     gap: 40px;
 }
 
-.hero-section .text{
+.hero-section .text {
     flex: 5;
 }
 
-.hero-section .text h2{
-    font-size: 45px;
+.hero-section .text h2 {
+    font-size: 48px;
+    background: linear-gradient(135deg, var(--link-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
 }
 
-.hero-section .text .links{
-    margin-top: 25px;
+.hero-section .text p {
+    line-height: 1.7;
+    color: #94A3B8;
 }
 
-.hero-section .text .links a{
+.hero-section .text .links {
+    margin-top: 30px;
+}
+
+.hero-section .text .links a {
     display: inline-block;
-    padding: 5px 10px;
-    border: 2px solid var(--link-color);
+    padding: 10px 20px;
+    border: 2px solid var(--border-color);
     border-radius: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
-    transition: 0.1s;
-}
-
-.hero-section .text .links a:hover{
+    transition: all 0.2s;
     color: var(--text-color);
-    border: 2px solid var(--text-color);
 }
 
-.hero-section .headshot{
+.hero-section .text .links a:hover {
+    border-color: var(--link-color);
+    background-color: rgba(99, 102, 241, 0.1);
+    transform: translateY(-2px);
+}
+
+.hero-section .headshot {
     flex: 2;
     display: flex;
     justify-content: right;
 }
 
-.hero-section .headshot img{
+.hero-section .headshot img {
     width: 350px;
     border-radius: 50%;
+    border: 4px solid var(--border-color);
+    box-shadow: 0 10px 40px rgba(99, 102, 241, 0.2);
 }
 
 /*Skills section*/
-
-.skills-section{
+.skills-section {
     padding: 0 50px;
-    margin-bottom: 100px;
+    margin-bottom: 120px;
 }
 
-.skills-section h2{
+.skills-section h2 {
     text-align: center;
-    font-size: 35px;
+    font-size: 38px;
+    margin-bottom: 10px;
 }
 
-.skills-section .text{
+.skills-section .text {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    color: #94A3B8;
 }
 
-.skills-section .cells{
+.skills-section .cells {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.skills-section .cells .cell{
+.skills-section .cells .cell {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10PX;
-
+    gap: 10px;
     width: 200px;
-    padding: 10px 20px;
+    padding: 15px 25px;
     margin: 10px;
-    border: 1.5px solid #d3d3d3;
+    background-color: var(--card-background);
+    border: 1.5px solid var(--border-color);
     border-radius: 10px;
+    transition: all 0.2s;
 }
 
-.skills-section .cells .cell img{
-    width:  30px;
+.skills-section .cells .cell:hover {
+    border-color: var(--link-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.15);
+}
+
+.skills-section .cells .cell img {
+    width: 30px;
     height: 30px;
     object-fit: contain;
     border-radius: 2px;
 }
 
-.skills-section .cells .cell span{
+.skills-section .cells .cell span {
     font-size: 18px;
 }
 
 /*Projects section*/
-
 .projects-section {
     padding: 0 50px;
-    margin-bottom: 100px;
+    margin-bottom: 120px;
 }
 
 .projects-section h2 {
     text-align: center;
-    font-size: 35px;
+    font-size: 38px;
+    margin-bottom: 10px;
 }
 
 .projects-section .text {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    color: #94A3B8;
 }
 
 .projects-section .project-cards {
@@ -177,16 +216,17 @@ nav .right a span{
 
 .projects-section .project-card {
     width: 350px;
-    background-color: #fff;
-    border: 1.5px solid #d3d3d3;
-    border-radius: 10px;
+    background-color: var(--card-background);
+    border: 1.5px solid var(--border-color);
+    border-radius: 12px;
     overflow: hidden;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: all 0.3s;
 }
 
 .projects-section .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.2);
+    border-color: var(--link-color);
 }
 
 .projects-section .project-card img {
@@ -196,37 +236,37 @@ nav .right a span{
 }
 
 .projects-section .project-card .project-info {
-    padding: 20px;
+    padding: 25px;
 }
 
 .projects-section .project-card .project-info h3 {
     font-size: 22px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     color: var(--text-color);
 }
 
 .projects-section .project-card .project-info p {
     font-size: 14px;
-    line-height: 1.6;
-    color: #666;
-    margin-bottom: 15px;
+    line-height: 1.7;
+    color: #94A3B8;
 }
 
 /*Contact section*/
-
 .contact-section {
     padding: 0 50px;
-    margin-bottom: 100px;
+    margin-bottom: 120px;
 }
 
 .contact-section h2 {
     text-align: center;
-    font-size: 35px;
+    font-size: 38px;
+    margin-bottom: 10px;
 }
 
 .contact-section .text {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    color: #94A3B8;
 }
 
 .contact-section .contact-content {
@@ -238,66 +278,72 @@ nav .right a span{
 
 .contact-section .contact-card {
     width: 300px;
-    background-color: #fff;
-    border: 1.5px solid #d3d3d3;
-    border-radius: 10px;
-    padding: 30px 20px;
+    background-color: var(--card-background);
+    border: 1.5px solid var(--border-color);
+    border-radius: 12px;
+    padding: 35px 25px;
     text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: all 0.3s;
 }
 
 .contact-section .contact-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 12px 30px rgba(99, 102, 241, 0.15);
+    border-color: var(--link-color);
 }
 
 .contact-section .contact-card i {
-    font-size: 40px;
-    color: var(--link-color);
-    margin-bottom: 15px;
+    font-size: 45px;
+    background: linear-gradient(135deg, var(--link-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 18px;
 }
 
 .contact-section .contact-card h3 {
     font-size: 22px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     color: var(--text-color);
 }
 
 .contact-section .contact-card p {
     font-size: 14px;
-    color: #666;
-    margin-bottom: 15px;
+    color: #94A3B8;
+    margin-bottom: 18px;
 }
 
 .contact-section .contact-card a {
     display: inline-block;
-    padding: 8px 20px;
+    padding: 10px 25px;
     border: 2px solid var(--link-color);
     border-radius: 10px;
     font-size: 14px;
-    transition: 0.1s;
+    transition: all 0.2s;
+    color: var(--text-color);
 }
 
 .contact-section .contact-card a:hover {
-    color: var(--text-color);
-    border: 2px solid var(--text-color);
+    background: linear-gradient(135deg, var(--link-color), var(--accent-color));
+    border-color: transparent;
+    color: #fff;
 }
 
 /*Resume section*/
-
 .resume-section {
     padding: 0 50px;
-    margin-bottom: 100px;
+    margin-bottom: 120px;
 }
 
 .resume-section h2 {
     text-align: center;
-    font-size: 35px;
+    font-size: 38px;
+    margin-bottom: 10px;
 }
 
 .resume-section .text {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    color: #94A3B8;
 }
 
 .resume-section .resume-content {
@@ -306,123 +352,121 @@ nav .right a span{
 }
 
 .resume-section .resume-card {
-    width: 400px;
-    background-color: #fff;
-    border: 1.5px solid #d3d3d3;
-    border-radius: 10px;
-    padding: 40px 30px;
+    width: 450px;
+    background-color: var(--card-background);
+    border: 1.5px solid var(--border-color);
+    border-radius: 12px;
+    padding: 50px 40px;
     text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: all 0.3s;
 }
 
 .resume-section .resume-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.2);
+    border-color: var(--link-color);
 }
 
 .resume-section .resume-card i {
-    font-size: 60px;
-    color: var(--link-color);
-    margin-bottom: 20px;
+    font-size: 70px;
+    background: linear-gradient(135deg, var(--link-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 25px;
 }
 
 .resume-section .resume-card h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 26px;
+    margin-bottom: 12px;
     color: var(--text-color);
 }
 
 .resume-section .resume-card p {
     font-size: 14px;
-    color: #666;
-    margin-bottom: 25px;
-    line-height: 1.6;
+    color: #94A3B8;
+    margin-bottom: 30px;
+    line-height: 1.7;
 }
 
 .resume-section .download-btn {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 12px 30px;
-    background-color: var(--link-color);
+    gap: 12px;
+    padding: 14px 35px;
+    background: linear-gradient(135deg, var(--link-color), var(--accent-color));
     color: #fff;
     border-radius: 10px;
     font-size: 16px;
     font-weight: 600;
-    transition: 0.2s;
-    border: 2px solid var(--link-color);
+    transition: all 0.2s;
+    border: none;
 }
 
 .resume-section .download-btn:hover {
-    background-color: var(--text-color);
-    border-color: var(--text-color);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
 }
 
 .resume-section .download-btn i {
     font-size: 16px;
     color: #fff;
     margin: 0;
+    background: none;
+    -webkit-text-fill-color: #fff;
 }
 
-@media (max-width: 850px){
-    /*hero*/
-    .hero-section .text h2{
-        font-size: 35px;
+@media (max-width: 850px) {
+    .hero-section .text h2 {
+        font-size: 38px;
     }
 }
 
-@media (max-width: 740px){
-    .hero-section{
+@media (max-width: 740px) {
+    .hero-section {
         flex-direction: column-reverse;
     }
-    .hero-section .headshot img{
+    .hero-section .headshot img {
         width: 300px;
     }
 }
 
-
-@media (max-width: 600px){
-    /*navbar*/
-    nav{
+@media (max-width: 600px) {
+    nav {
         padding: 0 20px;
     }
 
-    nav .right a{
+    nav .right a {
         font-size: 22px;
     }
 
-    nav .right a:last-child{
+    nav .right a:last-child {
         color: var(--text-color);
-        background-color: transparent;
+        background: transparent;
         padding: 0;
     }
 
-    nav .right a span{
+    nav .right a span {
         display: none;
     }
 
-    /*hero*/
-    .hero-section{
+    .hero-section {
+        padding: 0 20px;
+        margin: 50px 0 80px;
+    }
+
+    .hero-section .text h2 {
+        font-size: 32px;
+    }
+
+    .skills-section {
         padding: 0 20px;
     }
-    
-    .hero-section .text h2{
-        font-size: 30px;
+
+    .skills-section .cells .cell span {
+        font-size: 16px;
     }
 
-    /*skills*/
-
-    .skills-section{
-        padding: 0 20px;
-    }
-
-    .skills-section .cells .cell span{
-        font-size: 16px;    
-    }
-
-    /*proj*/
-
-      .projects-section {
+    .projects-section {
         padding: 0 20px;
     }
 
@@ -430,7 +474,7 @@ nav .right a span{
         width: 100%;
     }
 
-     .contact-section {
+    .contact-section {
         padding: 0 20px;
     }
 
