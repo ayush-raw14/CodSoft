@@ -43,12 +43,6 @@ It showcases my skills, projects, and provides contact information for potential
 
 ---
 
-# Preview
-
-[Portfolio Preview](./portfolio_ss.png)
-
----
-
 # Color Palette
 
 - **Background:** `#0F172A` (Dark Blue)
